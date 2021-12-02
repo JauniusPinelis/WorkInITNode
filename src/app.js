@@ -1,9 +1,9 @@
 const express = require('express');
+require('dotenv').config();
 
 const app = express();
 
-app.get("/healthcheck", (req, res) => {
-    res.send("OK");
-});
+require('./routes/swagger.route')(app);
+require('./routes/health.route')(app);
 
 module.exports = app;

@@ -7,5 +7,6 @@ const app = express();
 
 require('./routes/swagger.route')(app);
 require('./routes/health.route')(app);
+require('./routes/scrape.route')(app);
 
 module.exports = app;

@@ -1,6 +1,6 @@
 const ScrapeTask = require('../models/scrapeTask.model');
 
-const createScrapeTask = async (createTaskDto) => {
+const createScrapeTaskService = async (createTaskDto) => {
     try {
         var created = await ScrapeTask.create(createTaskDto); 
         return created;  
@@ -11,5 +11,5 @@ const createScrapeTask = async (createTaskDto) => {
 }
 
 module.exports = {
-    createScrapeTask
+    createScrapeTaskService
 }

@@ -1,10 +1,10 @@
-const createScrapeTask = require('../services/scrape.service');
+const {createScrapeTaskService} = require('../services/scrape.service');
 
-startScrape = async (req, res) => {
-    const createdTask = await createScrapeTask(req.body);
+createScrapeTask = async (req, res) => {
+    const createdTask = await createScrapeTaskService(req.body);
     res.status(201).send({id: '123'});
 }
 
 module.exports = {
-    startScrape
+    createScrapeTask
 }

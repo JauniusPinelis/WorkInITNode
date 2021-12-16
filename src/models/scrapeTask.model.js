@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 const scrapeTaskSchema = new mongoose.Schema({
-    name: String
+    name: String,
+    status: String,
 });
 
 const ScrapeTask = mongoose.model('ScrapeTask', scrapeTaskSchema);

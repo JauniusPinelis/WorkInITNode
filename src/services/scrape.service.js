@@ -1,8 +1,9 @@
-const ScrapeTask = require('../models/scrapeTask.model');
+const {createScrapeTask} = require('../repositories/scrapeTaskRepository');
 
 const createScrapeTaskService = async (createTaskDto) => {
     try {
-        var created = await ScrapeTask.create(createTaskDto); 
+        createTaskDto.status = 'pending';
+        var created = await createScrapeTask(createTaskDto); 
         return created;  
     }
     catch(err) {

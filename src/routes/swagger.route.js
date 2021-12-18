@@ -1,5 +1,5 @@
 const expressOasGenerator = require('express-oas-generator');
 
-module.exports = function(app) {
-    expressOasGenerator.init(app, {});
+module.exports = async function(app) {
+    //await expressOasGenerator.init(app, {});
 }

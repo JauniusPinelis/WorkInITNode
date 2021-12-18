@@ -1,8 +1,15 @@
 const mongoose = require('mongoose');
 const supertest = require('supertest');
+const {MongoMemoryServer } = require ('mongodb-memory-server');
 const app = require('../src/app');
 
 describe('scrapeTask', () => {
+
+    beforeAll(async () => {
+        const mongoServer = await MongoMemoryServer.create();
+    
+        await mongoose.connect(mongoServer.getUri());
+      });
 
     afterAll(
         ()=>{ mongoose.connection.close(true);}
@@ -15,7 +22,4 @@ describe('scrapeTask', () => {
             })
         })
     })
-
-    
-
 })

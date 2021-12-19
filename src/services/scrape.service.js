@@ -1,4 +1,14 @@
-const {createScrapeTask} = require('../repositories/scrapeTaskRepository');
+const {createScrapeTask, getScrapeTask} = require('../repositories/scrapeTaskRepository');
+
+const getScrapeTaskService = async (id) => {
+    try {
+        var task = await getScrapeTask(id);
+        return task;
+    }
+    catch(err){
+        throw err;
+    }
+}
 
 const createScrapeTaskService = async (createTaskDto) => {
     try {
@@ -12,5 +22,6 @@ const createScrapeTaskService = async (createTaskDto) => {
 }
 
 module.exports = {
-    createScrapeTaskService
+    createScrapeTaskService,
+    getScrapeTaskService
 }

@@ -11,13 +11,9 @@ describe('scrapeTask', () => {
         await mongoose.connect(mongoServer.getUri());
       });
 
-    // afterAll(
-    //     ()=>{ mongoose.connection.close(true);}
-    // );
-
     describe("Create scrapeTask", () => {
-        describe("Given new valid createProduct", () => {
-            it("Should return Ok",async () => {
+        describe("Given new product was created", () => {
+            it("Should return Ok with created",async () => {
                 var createTaskDto = {};
                 var response = await supertest(app).post('/scrapeTask').send(createTaskDto);
                 expect(response.status).toBe(201);
@@ -27,7 +23,15 @@ describe('scrapeTask', () => {
                 var createTaskDto = {};
                 var response = await supertest(app).post('/scrapeTask').send(createTaskDto);
                 expect(response.body.id).toBeDefined();
-            })
+            });
+
+            it('Get by id should return the object', async () => {
+                var createTaskDto = {};
+                var response = await supertest(app).post('/scrapeTask').send(createTaskDto);
+                var id = response.body.id;
+                var response = await supertest(app).get('/scrapeTask/' + id);
+                expect(response.body).toBeDefined();
+            });
         })
     })
 })

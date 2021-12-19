@@ -1,14 +1,9 @@
 const ScrapeTask = require('../models/scrapeTask.model');
 
-async function createScrapeTask(scrapeTask) {
+export async function createScrapeTask(scrapeTask: any) {
     return await ScrapeTask.create(scrapeTask);
 }
 
-async function getScrapeTask(id) {
+export async function getScrapeTask(id: number) {
     return await ScrapeTask.findById(id);
-}
-
-module.exports = {
-    createScrapeTask,
-    getScrapeTask
 }

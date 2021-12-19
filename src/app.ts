@@ -1,6 +1,7 @@
-const express = require('express');
-require('dotenv').config();
-require('./configs/database');
+import express from 'express';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 

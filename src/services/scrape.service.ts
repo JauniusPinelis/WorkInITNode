@@ -1,6 +1,6 @@
-const {createScrapeTask, getScrapeTask} = require('../repositories/scrapeTaskRepository');
+import { createScrapeTask, getScrapeTask } from '../repositories/scrapeTaskRepository';
 
-const getScrapeTaskService = async (id) => {
+const getScrapeTaskService = async (id: number) => {
     try {
         var task = await getScrapeTask(id);
         return task;
@@ -10,7 +10,7 @@ const getScrapeTaskService = async (id) => {
     }
 }
 
-const createScrapeTaskService = async (createTaskDto) => {
+const createScrapeTaskService = async (createTaskDto: any) => {
     try {
         createTaskDto.status = 'pending';
         var created = await createScrapeTask(createTaskDto); 

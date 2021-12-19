@@ -1,4 +1,4 @@
-import { createScrapeTask, getScrapeTask } from '../repositories/scrapeTaskRepository';
+import { createScrapeTask, getScrapeTask, getAll } from '../repositories/scrapeTaskRepository';
 
 const getScrapeTaskService = async (id: number) => {
     try {

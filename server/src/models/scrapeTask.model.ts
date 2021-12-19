@@ -1,10 +1,15 @@
-import mongoose from 'mongoose';
+import {Mongoose, Document, Schema, Model} from 'mongoose';
 
-const scrapeTaskSchema = new mongoose.Schema({
+interface IScrapeTask : Document {
+    name: string;
+    status: string;
+}
+
+const scrapeTaskSchema = new Schema<IScrapeTask>({
     name: String,
     status: String,
 });
 
-const ScrapeTask = mongoose.model('ScrapeTask', scrapeTaskSchema);
+const ScrapeTask = new Model<IScrapeTask>('ScrapeTask', scrapeTaskSchema);
 
 module.exports = ScrapeTask;

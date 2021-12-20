@@ -1,6 +1,7 @@
-import { createScrapeTaskHandler, getScrapeTaskHandler } from '../controllers/scrape.controller';
+import { createScrapeTaskHandler, getScrapeTaskHandler, getAllScrapeTasksHandler } from '../controllers/scrape.controller';
 
 module.exports = function(app: any){
     app.post('/scrapeTask', createScrapeTaskHandler);
     app.get('/scrapeTask/:id', getScrapeTaskHandler);
+    app.get('/scrapeTasks', getAllScrapeTasksHandler);
 }

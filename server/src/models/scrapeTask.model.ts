@@ -1,8 +1,8 @@
-import {Mongoose, Document, Schema, Model} from 'mongoose';
+import {Mongoose, Document, Schema, model, HydratedDocument} from 'mongoose';
 
-interface IScrapeTask : Document {
-    name: string;
-    status: string;
+interface IScrapeTask {
+    name: String;
+    status: String;
 }
 
 const scrapeTaskSchema = new Schema<IScrapeTask>({
@@ -10,6 +10,6 @@ const scrapeTaskSchema = new Schema<IScrapeTask>({
     status: String,
 });
 
-const ScrapeTask = new Model<IScrapeTask>('ScrapeTask', scrapeTaskSchema);
+const ScrapeTask = model('ScrapeTask', scrapeTaskSchema);
 
 module.exports = ScrapeTask;

@@ -34,4 +34,17 @@ describe('scrapeTask', () => {
             });
         })
     })
+
+    describe(
+        "Get all scrapeTasks", () => {
+            it("Should return an array", async () => {
+                var createTaskDto = {};
+                var response = await supertest(app).post('/scrapeTask').send(createTaskDto);
+
+                response = await supertest(app).get('/scrapeTasks');
+                
+                expect(response.body).toBeDefined();
+            });
+        }
+    )
 })

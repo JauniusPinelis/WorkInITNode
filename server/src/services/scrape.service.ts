@@ -1,4 +1,14 @@
-import { createScrapeTask, getScrapeTask, getAll } from '../repositories/scrapeTaskRepository';
+import { createScrapeTask, getScrapeTask, getAllScrapeTasks } from '../repositories/scrapeTaskRepository';
+
+const getAllScrapeTasksService = async () => {
+    try {
+        var tasks = await getAllScrapeTasks();
+        return tasks;
+    }
+    catch(err){
+        throw err;
+    }
+}
 
 const getScrapeTaskService = async (id: number) => {
     try {
@@ -23,5 +33,6 @@ const createScrapeTaskService = async (createTaskDto: any) => {
 
 module.exports = {
     createScrapeTaskService,
-    getScrapeTaskService
+    getScrapeTaskService,
+    getAllScrapeTasksService
 }

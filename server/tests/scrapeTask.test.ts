@@ -44,6 +44,7 @@ describe('scrapeTask', () => {
                 response = await supertest(app).get('/scrapeTasks');
                 
                 expect(response.body).toBeDefined();
+                expect(response.body.length).toBeGreaterThan(0);
             });
         }
     )

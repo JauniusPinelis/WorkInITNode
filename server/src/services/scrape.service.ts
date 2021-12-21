@@ -1,8 +1,17 @@
 import { createScrapeTask, getScrapeTask, getAllScrapeTasks } from '../repositories/scrapeTaskRepository';
+import ScrapeTaskDto from '../dtos/scrapeTaskDto';
 
 const getAllScrapeTasksService = async () => {
     try {
-        var tasks = await getAllScrapeTasks();
+        var taskEntities = await getAllScrapeTasks();
+
+        const tasks:ScrapeTaskDto[] = taskEntities.map(task => {
+            return {
+                id: task.id,
+                status: task.status
+            }
+        });
+
         return tasks;
     }
     catch(err){

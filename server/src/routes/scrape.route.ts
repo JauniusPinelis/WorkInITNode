@@ -3,5 +3,5 @@ import { createScrapeTaskHandler, getScrapeTaskHandler, getAllScrapeTasksHandler
 module.exports = function(app: any){
     app.post('/scrapeTask', createScrapeTaskHandler);
     app.get('/scrapeTask/:id', getScrapeTaskHandler);
-    app.get('/scrapeTasks', getAllScrapeTasksHandler);
+    app.get('/scrapeTask', getAllScrapeTasksHandler);
 }

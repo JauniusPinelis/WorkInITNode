@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 import { IScrapeTask } from '../models/scrapeTask';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ScrapeTaskService {
 
-  private readonly serverUrl:string = 'http://localhost:3333/api/scrape-tasks';
+  private readonly serverUrl:string = 'http://localhost:3333/scrapetask';
 
   constructor(private httpClient: HttpClient) { }
 

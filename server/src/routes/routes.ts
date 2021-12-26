@@ -5,4 +5,4 @@ const registerRoutes = (app: Application) => {
     require('./scrape.route')(app);
 }
 
-export default registerRoutes;
+module.exports = registerRoutes;

@@ -1,7 +1,9 @@
 import express, { Application } from 'express';
 import dotenv from 'dotenv';
 
-import registerRoutes from './routes/routes';
+const registerRoutes = require('./routes/routes.ts');
+const registerSchedulers = require('./utils/registerSchedulers');
+
 
 dotenv.config();
 
@@ -12,5 +14,6 @@ app.use(express.json());
 app.use(cors());
 
 registerRoutes(app);
+registerSchedulers();
 
 module.exports = app;

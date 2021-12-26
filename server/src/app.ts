@@ -1,16 +1,16 @@
-import express from 'express';
+import express, { Application } from 'express';
 import dotenv from 'dotenv';
+
+import registerRoutes from './routes/routes';
 
 dotenv.config();
 
-const app = express();
+const app: Application = express();
 const cors = require('cors');
 
 app.use(express.json());
 app.use(cors());
 
-require('./routes/swagger.route')(app);
-require('./routes/health.route')(app);
-require('./routes/scrape.route')(app);
+registerRoutes(app);
 
 module.exports = app;

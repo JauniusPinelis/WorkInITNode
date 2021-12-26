@@ -1,8 +1,10 @@
-const mongoose = require('mongoose');
+import { Mongoose } from "mongoose";
 
-const mongo_uri = process.env.MONGO_URI;
+const mongoose:Mongoose = require('mongoose');
 
-export default async function connect () {
+const mongo_uri = process.env.MONGO_URI || 'mongodb://localhost:27017/scrape-task';
+
+const connectDatabase = async () =>{
     try {
         await mongoose.connect(mongo_uri);
         console.log('connected to mongo');
@@ -12,3 +14,5 @@ export default async function connect () {
         process.exit(1);
     }
 }
+
+module.exports = connectDatabase;

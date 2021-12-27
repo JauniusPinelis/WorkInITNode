@@ -9,28 +9,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+      <tr *ngFor="let scrapeTask of scrapeTasks">
+        <td scope="row">  {{scrapeTask.id}}</td>
+        <td> {{scrapeTask.status}}</td>
+        <td> {{scrapeTask.category}}</td>
+        <td> {{scrapeTask.createdUtc}}</td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
+      
     </tbody>
   </table>
-
-<ul>
-    <li *ngFor="let scrapeTask of scrapeTasks">
-        {{scrapeTask.id}} - {{scrapeTask.status}}
-    </li>
-</ul>

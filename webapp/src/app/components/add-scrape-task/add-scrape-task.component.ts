@@ -26,7 +26,7 @@ export class AddScrapeTaskComponent implements OnInit {
 
     this.scrapeTaskService.Create(createScrapeTask).subscribe(data => {
       console.log(data);
-    }
+    });
   }
 
 }

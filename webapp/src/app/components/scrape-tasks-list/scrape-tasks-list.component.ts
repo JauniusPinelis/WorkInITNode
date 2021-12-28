@@ -16,13 +16,13 @@ export class ScrapeTasksListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.GetAll().subscribe(data => {
+    this.getAll().subscribe(data => {
       this.scrapeTasks = data;
     });
   }
 
-  public GetAll(): Observable<IScrapeTask[]> {
-    return this.scrapeTaskService.GetAll();
+  public getAll(): Observable<IScrapeTask[]> {
+    return this.scrapeTaskService.getAll();
   }
 
 }

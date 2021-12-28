@@ -1,6 +1,7 @@
 export interface IScrapeTask {
     id: number;
-    status: String;
-    category: String;
+    name: string;
+    status: string;
+    category: string;
     createdUtc: Date;
 }

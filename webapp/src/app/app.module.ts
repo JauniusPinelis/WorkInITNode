@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScrapeTasksListComponent } from './components/scrape-tasks-list/scrape-tasks-list.component';
 import { AddScrapeTaskComponent } from './components/add-scrape-task/add-scrape-task.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AddScrapeTaskComponent } from './components/add-scrape-task/add-scrape-
     AddScrapeTaskComponent
   ],
   imports: [
+    FormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule

@@ -1,8 +1,11 @@
+import IUser from "../interfaces/user.interface.interface";
+import {Mongoose, Document, Schema, model, HydratedDocument} from 'mongoose';
+
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
-    first_name: {type: String, default: null},
-    last_name: {type: String, default: null},
+const userSchema = new Schema<IUser>({
+    firstName: {type: String},
+    lastName: {type: String},
     email: {type: String, unique: true},
     password: {type: String},
     token: {type: String}

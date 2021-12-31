@@ -41,7 +41,7 @@ describe('scrapeTask', () => {
                 var createTaskDto = {};
                 var response = await supertest(app).post('/scrapeTask').send(createTaskDto);
 
-                response = await supertest(app).get('/scrapeTasks');
+                response = await supertest(app).get('/scrapeTask');
                 
                 expect(response.body).toBeDefined();
                 expect(response.body.length).toBeGreaterThan(0);
@@ -49,3 +49,5 @@ describe('scrapeTask', () => {
         }
     )
 })
+
+export {};

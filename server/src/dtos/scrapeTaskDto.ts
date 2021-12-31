@@ -1,5 +1,4 @@
-export default interface ScrapeTaskDto {
+import BaseDto from "./base.Dto";
 
-    id: number;
-    status: String;
+export default interface ScrapeTaskDto extends BaseDto {
 }

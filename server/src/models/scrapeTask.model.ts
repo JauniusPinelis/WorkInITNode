@@ -1,9 +1,9 @@
 import {Mongoose, Document, Schema, model, HydratedDocument} from 'mongoose';
 
 interface IScrapeTask {
-    name: String;
-    status: String;
-    category: String;
+    name: string;
+    status: string;
+    category: string;
     createdUtc: Date;
 }
 

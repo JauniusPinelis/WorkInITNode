@@ -1,11 +1,5 @@
 import {Mongoose, Document, Schema, model, HydratedDocument} from 'mongoose';
-
-interface IScrapeTask {
-    name: string;
-    status: string;
-    category: string;
-    createdUtc: Date;
-}
+import IScrapeTask from './interfaces/scrape-task.interface';
 
 const scrapeTaskSchema = new Schema<IScrapeTask>({
     name: String,

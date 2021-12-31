@@ -12,10 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-oas-generator": "^1.0.41",
+    "jsonwebtoken": "^8.5.1",
     "mongodb-memory-server": "^8.0.4",
     "mongoose": "^6.0.14",
     "node-cron": "^3.0.0",

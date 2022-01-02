@@ -1,4 +1,4 @@
-import IUser from "../interfaces/user.interface.interface";
+import IUser from "../interfaces/user.interface";
 import {Mongoose, Document, Schema, model, HydratedDocument} from 'mongoose';
 
 const mongoose = require('mongoose');

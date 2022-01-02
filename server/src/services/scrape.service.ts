@@ -1,5 +1,5 @@
-import { createScrapeTask, getScrapeTask, getAllScrapeTasks } from '../repositories/scrapeTask.repository';
-import ScrapeTaskDto from '../dtos/scrapeTaskDto';
+import { createScrapeTask, getScrapeTask, getAllScrapeTasks } from '../repositories/scrape-task.repository';
+import ScrapeTaskDto from '../dtos/scrape-tasks/scrape-task.dto';
 
 const getAllScrapeTasksService = async () => {
     var taskEntities = await getAllScrapeTasks();

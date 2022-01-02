@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { ScrapeTasksListComponent } from './components/scrape-tasks-list/scrape-tasks-list.component';
 import { AddScrapeTaskComponent } from './components/add-scrape-task/add-scrape-task.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScrapeTasksListComponent,
-    AddScrapeTaskComponent
+    AddScrapeTaskComponent,
+    FooterComponent,
+    NavBarComponent
   ],
   imports: [
     FormsModule,

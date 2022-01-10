@@ -6,7 +6,9 @@ const bcryptjs = require('bcrypt');
 
 const registerUserService = (user: ICreateUserDto) => {
 
+    
     var oldUser = getUserByEmail(user.email);
+    if (user)
 
     var newUser = new UserModel({
         email: user.email,

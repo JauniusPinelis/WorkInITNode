@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 
 const registerRoutes = require('./routes/routes.ts');
 const registerSchedulers = require('./utils/registerSchedulers');
+const handleErrorsMiddleware = require('./middlewares/error-handling.middleware');
 
 
 dotenv.config();
@@ -15,5 +16,7 @@ app.use(cors());
 
 registerRoutes(app);
 registerSchedulers();
+
+app.use(handleErrorsMiddleware());
 
 module.exports = app;

@@ -1,3 +1,5 @@
+const {createUser} = require('../repositories/user.repository');
+
 const registerUserHandler = (req,res) => {
     try {
         let createdUser = createUser(req.body);
@@ -14,4 +16,9 @@ const loginUserHandler = (req, res) => {
     catch (error){
         res.status(500).send(error);
     }
+}
+
+module.exports = {
+    registerUserHandler,
+    loginUserHandler
 }

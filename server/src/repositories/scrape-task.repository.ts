@@ -1,7 +1,7 @@
 import { HydratedDocument } from "mongoose";
 import IScrapeTask from "../models/interfaces/scrape-task.interface";
 
-const ScrapeTask = require('../models/scrapeTask.model');
+const ScrapeTask = require('../models/mongoose/scrape-task.model');
 
 
 export async function createScrapeTask(scrapeTask: IScrapeTask) {

@@ -1,5 +1,5 @@
 import { Application } from "express";
-
+import {healthCheckHandler} from '../controllers/health-check.controller';
 module.exports = function(app: Application) {
     /**
    * @openapi
@@ -12,7 +12,5 @@ module.exports = function(app: Application) {
    *       200:
    *         description: App is up and running
    */
-    app.get("/healthcheck", (req: any, res: any) => {
-        res.send("OK");
-    });
+    app.get("/healthcheck", healthCheckHandler);
 }

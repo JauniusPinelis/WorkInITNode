@@ -10,7 +10,7 @@ import { ScrapeTaskService } from 'src/app/services/scrape-task.service';
 })
 export class AddScrapeTaskComponent implements OnInit {
 
-  public name: string = "";
+  public nameInput: string = "";
   public category: string = "";
 
   constructor(private scrapeTaskService:ScrapeTaskService) { }
@@ -20,7 +20,7 @@ export class AddScrapeTaskComponent implements OnInit {
 
   public submit() {
     var createScrapeTask: ICreateScrapeTask = {
-      name: this.name,
+      name: this.nameInput,
       category: this.category
     };
 

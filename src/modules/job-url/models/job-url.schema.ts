@@ -12,3 +12,4 @@ export class JobUrl {
 }
 
 export const JobUrlSchema = SchemaFactory.createForClass(JobUrl);
+

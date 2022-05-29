@@ -11,6 +11,6 @@ export class JobUrlController {
     }
 
     public async create(@Res() response, @Body() jobUrl: JobUrl){
-
+        
     }
 }
